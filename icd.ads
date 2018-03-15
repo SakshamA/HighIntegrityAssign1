@@ -34,21 +34,17 @@ package ICD is
 	SendTachySignal : Boolean;
 		end record;
 
-	-- Create and initialise an ICD.
+	-- Create and initialise an ICD
 	procedure Init(Icd : out ICDType);
 
+	-- Turn on the ICD
 	procedure On(Icd : out ICDType);
 
+	-- Turn off the ICD
 	procedure Off(Icd : out ICDType);
 
-	function IsOn(Icd : in ICDType) return Boolean;
-
-	-- A procedure to detect tachycardia
+	-- A procedure to detect tachycardia and send impulses if necessary
 	procedure CheckTachy(Icd : in out ICDType; Monitor : in HRM.HRMType);
-
-	function HasTachy(Icd : in ICDType) return Boolean; 
-
-	function HasVentFibril(Icd : in ICDType) return Boolean; 
 
 	-- A procedure to detect ventricle fibrillation
 	procedure CheckVentFibril(Icd : in out ICDType; Monitor : in HRM.HRMType; 
@@ -59,19 +55,13 @@ package ICD is
 	function AverageChange(Icd : in ICDType; Monitor : in HRM.HRMType; 
 						        History : in Network.RateHistory) return Integer;
 
+	-- A procedure to change tachycardia and ventricle fibrillation settings
+	procedure ChangeSettingsResponse(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
+
+	-- A procedure to read tachycardia and ventricle fibrillation settings
+	procedure ReadSettingsResponse(Icd : in ICDType; ReadTachyBound : in out BPM; ReadJoulesToDeliver : in out Joules);
+
+	-- Tick the clock; determine whether or not to send impulses
 	procedure Tick(Icd : in out ICDType; Gen : in out ImpulseGenerator.GeneratorType; Monitor : in HRM.HRMType; History : in Network.RateHistory);
 
 end ICD;
-
-	-- Turn on the ICD.
-
-	-- Turn off the ICD.
-
-	-- Get the status of the ICD.
-
-	-- A function to detect tachycardia
-	--# return B.IsTachy
-
-	-- A function to detect ventricle fibrillation
-	--# return B.IsVentFibril
-

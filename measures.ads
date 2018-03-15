@@ -23,12 +23,12 @@ package Measures is
    --# pre Fst <= Lst;
    --# return Output => (Fst <= Output and Output <= Lst);
    
-   -- A function to limit MmHg measures
+   -- A function to limit BPM measures
    function LimitBPM(Input : in Integer) return BPM;
-   --# return Output => (MmHg'First <= Output and Output <= MmHg'Last);
+   --# return Output => (BPM'First <= Output and Output <= BPM'Last);
    
-   -- A function to limit Dosage measures
+   -- A function to limit Joules measures
    function LimitJoules(Input : in Integer) return Joules;
-   --# return Output => (Dosage'First <= Output and Output <= MmHg'Last);
+   --# return Output => (Joules'First <= Output and Output <= Joules'Last);
       
 end Measures;
