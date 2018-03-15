@@ -1,0 +1,91 @@
+V "GNAT Lib v2017"
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U principal%b		principal.adb		2bf99b12 NE OO PK KM
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.address_image%s  s-addima.adb		s-addima.ali
+W system.address_to_access_conversions%s
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U principal%s		principal.ads		ba98eec4 EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D principal.ads		20180308011338 ba98eec4 principal%s
+D principal.adb		20180308011338 44d6cc17 principal%b
+D system.ads		20170516105954 32a08138 system%s
+D s-addima.ads		20170516105950 a1ec9d3a system.address_image%s
+D s-atacco.ads		20170516105954 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
+D s-imenne.ads		20170516105950 614c06c0 system.img_enum_new%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-secsta.ads		20170516105954 9751b57e system.secondary_stack%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 11|3r6 26r7 27r7 34r7
+X 6 a-textio.ads
+49K13*Text_IO 471e16 11|3w10 26r11 27r11 34r11
+242U14*Put 11|26s19 27s19 34s19
+X 10 principal.ads
+1K9*Principal 29E9 32l5 32e14 11|5b14 36l5 36t14
+4E9*Role 4e59 15r43 20r58 30r15 11|7r43 12r58 32r11
+4n18*Cardiologist{4E9}
+4n32*ClinicalAssistant{4E9}
+4n51*Patient{4E9}
+6R9*Principal 7r36 15r28 20r43 23r41 29c9 31e14 11|7r28 12r43 19r64 31r41
+7P9*PrincipalPtr(6R9) 12r41 26r44 11|18r41 24r44
+12V13*PrincipalPtrToString{string} 12>34 11|18b13 22l8 22t28 26s23
+12p34 P{7P9} 11|18b34 21r71
+15V13*HasRole{boolean} 15>21 15>39 11|7b13 10l8 10t15
+15r21 P{6R9} 11|7b21 9r19
+15e39 R{4E9} 11|7b39 9r15
+20U14*InitPrincipalForRole 20<35 20>54 11|12b14 15l8 15t28
+20r35 P{6R9} 11|12b35 14m7
+20e54 R{4E9} 11|12b54 14r19
+23U14*DebugPrintPrincipal 23>34 11|28s7 31b14 35l8 35t27
+23r34 P{6R9} 11|31b34 32r19
+26U14*DebugPrintPrincipalPtr 26>37 11|24b14 29l8 29t30
+26p37 P{7P9} 11|24b37 26r44 28r27
+30e6*MyRole{4E9} 11|9r21 14m9 32r21
+X 11 principal.adb
+19K15 ATAC[14|39] 21r35 21r51
+32e7 R{10|4E9} 34r23
+X 12 system.ads
+37K9*System 11|1r6 2r6 19r27 21r14 12|200e11
+67M9*Address
+X 13 s-addima.ads
+39V17*Address_Image{string} 11|1w13 21s21
+X 14 s-atacco.ads
+39k16*Address_To_Access_Conversions 11|2w13 19r34 14|63e41
+47P9 Object_Pointer(10|6R9) 11|21r56[19]
+58V13*To_Address{12|67M9} 11|21s40[19]
+

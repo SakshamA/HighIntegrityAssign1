@@ -1,0 +1,205 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_ANONYMOUS_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U network%b		network.adb		f4a5e0c6 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.float_random%s  a-nuflra.adb	a-nuflra.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W measures%s		measures.adb		measures.ali
+W principal%s		principal.adb		principal.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U network%s		network.ads		924b170e EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.containers.doubly_linked_lists%s
+W ada.tags%s		a-tags.adb		a-tags.ali
+W measures%s		measures.adb		measures.ali
+W principal%s		principal.adb		principal.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-assert.ads		20170516105948 a1febc19 ada.assertions%s
+D a-contai.ads		20170516105950 61e5e089 ada.containers%s
+D a-cdlili.ads		20170516105948 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20170516105950 20298884 ada.containers.helpers%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-finali.ads		20170516105954 bf4f806b ada.finalization%s
+D a-inteio.ads		20170516105954 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20170516105952 7c7305e9 ada.iterator_interfaces%s
+D a-numeri.ads		20170516105950 bb51c45a ada.numerics%s
+D a-nuflra.ads		20170516105950 4056ab7a ada.numerics.float_random%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
+D a-tiinio.ads		20170516105950 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D network.ads		20180314035030 0ddaba93 network%s
+D network.adb		20180308011338 7ff82da3 network%b
+D principal.ads		20180308011338 ba98eec4 principal%s
+D randomnumber.ads	20180308011338 b89e058a randomnumber%s
+D system.ads		20170516105954 32a08138 system%s
+D s-assert.ads		20170516105954 cd8d2c94 system.assertions%s
+D s-atocou.ads		20170516105956 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
+D s-finroo.ads		20170516105954 4ff27390 system.finalization_root%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-rannum.ads		20170516105952 99ade2f2 system.random_numbers%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 21|3r6 22|4r6 4r46 5r6 6r6 6r23 7r6 69r19 117r7 142r15 143r27
+X 2 a-assert.ads
+50K13*Assertions 66e19 22|5w10 69r23
+55X4*Assertion_Error 22|69r34
+X 3 a-contai.ads
+16K13*Containers 24e19 21|3r10
+X 4 a-cdlili.ads
+46k24*Doubly_Linked_Lists 406e39 21|3w21
+X 8 a-inteio.ads
+18K13*Integer_Text_IO[16|46] 22|7w10 142r19 143r31
+X 10 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[4|69]>
+X 11 a-numeri.ads
+16K13*Numerics 32e17 22|4r10 4r50
+X 12 a-nuflra.ads
+41K22*Float_Random 74e30 22|4w19 4r59
+49F12*Uniformly_Distributed{float} 22|20r44
+X 15 a-textio.ads
+49K13*Text_IO 471e16 22|6w10 6r27 117r11
+166U14*New_Line 22|117s56 128s23 132s23 136s23 146s22
+242U14*Put 22|117s19 126s13 128s13 130s13 132s13 134s13 136s13 138s12 140s12
+. 143s15 144s15 146s12
+X 16 a-tiinio.ads
+66U14*Put 22|142s35[8|18] 143s47[8|18]
+X 20 measures.ads
+3K9*Measures 34e13 21|2w6 36r14 37r14 58r27 59r32 62r27 63r32 22|1w6 30r19
+. 31r9 32r44 33r44 35r16 36r9 37r44 38r44
+5i4*MIN_JOULES{integer} 22|32r53
+6i4*MAX_JOULES{integer} 22|33r53
+9I12*Joules{integer} 21|59r41 63r41 22|30r28
+11i4*MIN_BPM{integer} 22|37r53
+12i4*MAX_BPM{integer} 22|38r53
+15I12*BPM{integer} 21|36r23 58r36 62r36 22|35r25
+18M9*TickCount 21|37r23
+27V13*LimitBPM{15I12} 22|36s18
+31V13*LimitJoules{9I12} 22|31s18
+X 21 network.ads
+6K9*Network 107E9 118l5 118e12 22|9b14 162l5 162t12
+9R9*Network 86r29 89r35 94r41 102r32 107c9 116e14 22|74r29 101r41 113r35
+. 153r32
+14E9*NetworkMessageType 21e56 26r6 31r6 51r38 22|25r17 26r9
+14n32*ModeOn{14E9} 26r29 66r15 22|50r15 51r36 125r15
+15n32*ModeOff{14E9} 68r15 22|53r15 54r36 129r15
+16n32*ReadRateHistoryRequest{14E9} 70r15 22|56r15 57r36 133r15
+17n32*ChangeSettingsRequest{14E9} 60r15 22|62r15 63r36
+18n32*ReadSettingsRequest{14E9} 31r29 52r29 54r15 22|59r15 60r36
+19n32*ChangeSettingsResponse{14E9} 64r15
+20n32*ReadSettingsResponse{14E9} 56r15
+21n32*ReadRateHistoryResponse{14E9} 72r15 22|137r15
+25i4*FIRST_TOICD_MESSAGE_INDEX{integer} 22|27r41
+30i4*LAST_TOICD_MESSAGE_INDEX{integer} 22|28r41
+35R9*RateRecord 38e14 42r67
+36i7*Rate{20|15I12} 22|142r70
+37m7*Time{20|18M9} 22|143r82
+41i4*HISTORY_LENGTH{integer} 42r48
+42A9*RateHistory(35R9)<integer> 74r23
+51R9*NetworkMessage 51d24 78e14 90r39 96r42 99r45 115r24 22|24r41 103r42
+. 114r39 122r45
+51e24*MessageType{14E9} 53r12 22|51m21 54m21 57m21 60m21 63m21 124r20
+55p13*RSource{23|7P9} 22|61m21
+57p13*RDestination{23|7P9}
+58i13*RTachyBound{20|15I12}
+59i13*RJoulesToDeliver{20|9I12}
+61p13*CSource{23|7P9} 22|64m21
+62i13*CTachyBound{20|15I12} 22|65m21
+63i13*CJoulesToDeliver{20|9I12} 22|66m21
+65p13*CDestination{23|7P9}
+67p13*MOnSource{23|7P9} 22|52m21 127r54
+69p13*MOffSource{23|7P9} 22|55m21 131r54
+71p13*HSource{23|7P9} 22|58m21 135r54
+73p13*HDestination{23|7P9} 22|139r53
+74a13*History{42A9} 22|141r33 142m55 143m67
+81A9*PrincipalArray(23|7P9)<integer> 86r63 109r27 22|23r51 74r63 78r29
+86U14*Init 86<19 86^38 22|74b14 99l8 99t12
+86r19 Net{9R9} 22|74b19 78m7 81r10 89r7 90r7 91r7 94m7 96r10 97m10 97r54
+86p38 KnownPrincipals(81A9) 22|74b38 78r44 78r67 80r20 81r35 89r22 90r22
+. 91r22
+89U14*SendMessage 89>26 90>26 22|113b14 119l8 119t19
+89r26 Net{9R9} 22|113b26
+90r26 Message{51R9} 22|114b26 118r25
+94U14*GetNewMessage 94=28 95<28 96<28 22|101b14 109l8 109t21
+94r28 Net{9R9} 22|101b28 105r30 106r10 107r21
+95b28 NewMessageAvailable{boolean} 22|102b28 105m7
+96r28 Message{51R9} 22|103b28 107m10
+99U14*DebugPrintMessage 99>32 22|118s7 122b14 151l8 151t25
+99r32 Message{51R9} 22|122b32 124r12 127r46 131r46 135r46 139r45 141r25 142r47
+. 143r59
+102U14*Tick 102=19 22|153b14 160l8 160t12
+102r19 Net{9R9} 22|153b19 155m7 157r10 158m10 158r54
+109p7*Principals(81A9) 22|78m11 81r14 89r11 90r11 91r11 97r58 158r58
+112b7*CurrentMessageAvailable{boolean} 22|94m11 96r14 105r34 106r14 155m11
+. 157r14
+115r7*CurrentMessage{51R9} 22|97m14 107r25 158m14
+X 22 network.adb
+14p4 UnknownCard{23|7P9} 84r38 89r49
+15p4 UnknownClin{23|7P9} 85r38 90r49
+16p4 UnknownPatient{23|7P9} 86r38 91r49
+20f4 NewMessageProbabilityPerTick{12|49F12} 95r44 156r44
+23V13 GenerateRandomMessage{21|51R9} 23b13 23>35 71l8 71t29 97s32 158s32
+23a35 Principals{21|81A9} 44r9 45r48 46r48
+25e7 MsgType{21|14E9} 49r12
+30i7 NewJoules{20|9I12} 66r41
+35i7 NewBPM{20|15I12} 65r36
+41p7 Prin{23|7P9} 43m7 52r34 55r35 58r32 61r32 64r32
+80i11 Index{integer} 81r25 81r51
+141i16 Index{integer} 142r63 143r75
+X 23 principal.ads
+1K9*Principal 21|1w6 55r23 57r28 61r23 65r28 67r25 69r26 71r23 73r28 81r55
+. 22|3w6 14r18 14r48 15r18 15r48 16r21 16r51 41r14 84r7 84r54 85r7 85r54
+. 86r7 86r57 127r13 131r13 135r13 139r12 23|32e14
+4n18*Cardiologist{4E9} 22|84r64
+4n32*ClinicalAssistant{4E9} 22|85r64
+4n51*Patient{4E9} 22|86r67
+6R9*Principal 22|14r58 15r58 16r61 23|31e14
+7P9*PrincipalPtr(6R9) 21|55r33 57r38 61r33 65r38 67r35 69r36 71r33 73r38
+. 81r65 22|14r28 15r28 16r31 41r24
+20U14*InitPrincipalForRole 22|84s17 85s17 86s17
+26U14*DebugPrintPrincipalPtr 22|127s23 131s23 135s23 139s22
+X 24 randomnumber.ads
+4K9*RandomNumber 22|2w6 27r13 32r16 37r16 45r20 95r9 156r9 24|44e17
+18V13*UniformInteger{integer} 22|27s26 32s29 37s29 45s33
+38V13*RandomBooleanWithBias{boolean} 22|95s22 156s22
+

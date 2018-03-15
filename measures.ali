@@ -1,0 +1,32 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+
+U measures%b		measures.adb		17bda97a NE OO PK
+
+U measures%s		measures.ads		ab0ff7ab EE NE OO PK
+
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D measures.adb		20180308011338 bcb25ed1 measures%b
+D system.ads		20170516105954 32a08138 system%s
+X 1 measures.ads
+3K9*Measures 34l5 34e13 2|1b14 29l5 29t13
+5i4*MIN_JOULES{integer} 9r36
+6i4*MAX_JOULES{integer} 9r50
+9I12*Joules{integer} 31r52 2|24r52 26r27 26r41
+11i4*MIN_BPM{integer} 15r33
+12i4*MAX_BPM{integer} 15r44
+15I12*BPM{integer} 27r49 2|19r49 21r27 21r38
+18M9*TickCount
+21V13*Limit{integer} 21>19 21>39 21>57 2|3b13 17l8 17t13 21s14 26s14
+21i19 Input{integer} 2|3b19 8r10 10r13 13r20
+21i39 Fst{integer} 2|3b39 8r18 9r20
+21i57 Lst{integer} 2|3b57 10r21 11r20
+27V13*LimitBPM{15I12} 27>22 2|19b13 22l8 22t16
+27i22 Input{integer} 2|19b22 21r20
+31V13*LimitJoules{9I12} 31>25 2|24b13 27l8 27t19
+31i25 Input{integer} 2|24b25 26r20
+X 2 measures.adb
+6i7 Output{integer} 9m10 11m10 13m10 16r14
+

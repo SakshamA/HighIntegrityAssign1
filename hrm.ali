@@ -1,0 +1,63 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+
+U hrm%b			hrm.adb			d8663c70 NE OO PK IU
+W heart%s		heart.adb		heart.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U hrm%s			hrm.ads			33bceb74 EE NE OO PK IU
+W heart%s		heart.adb		heart.ali
+W measures%s		measures.adb		measures.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-numeri.ads		20170516105950 bb51c45a ada.numerics%s
+D a-nuflra.ads		20170516105950 4056ab7a ada.numerics.float_random%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D heart.ads		20180308011338 9fbc8907 heart%s
+D hrm.ads		20180308011338 070f95d8 hrm%s
+D hrm.adb		20180308011338 f84b2525 hrm%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D randomnumber.ads	20180308011338 b89e058a randomnumber%s
+D system.ads		20170516105954 32a08138 system%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-rannum.ads		20170516105952 99ade2f2 system.random_numbers%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+X 5 heart.ads
+7K9*Heart 39e11 6|2w6 22r45 36r50 7|1w6 14r45 18r7 41r50 45r10
+10R9*HeartType 18e17 6|22r51 36r56 7|14r51 41r56
+33U14*GetRate 7|18s13 45s16
+X 6 hrm.ads
+7K9*HRM 38l5 38e8 7|4b14 57l5 57t8
+10R9*HRMType 16e17 19r29 22r27 25r31 28r27 32r31 36r32 7|8r29 14r27 21r31
+. 26r27 31r31 41r32
+13i10*Rate{9|15I12} 7|11m11 18m30 35r22 45m33 48m14 49r71 53m14
+15b10*IsOn{boolean} 7|10m11 17m11 23m11 28r18 34r14 43r14
+19U14*Init 19<19 7|8b14 12l8 12t12
+19r19 Hrm{10R9} 7|8b19 10m7 11m7
+22U14*On 22<17 22>36 7|14b14 19l8 19t10
+22r17 Hrm{10R9} 7|14b17 17m7 18m26 18r26
+22r36 Hrt{5|10R9} 7|14b36 18r21
+25U14*Off 25=18 7|21b14 24l8 24t11
+25r18 Hrm{10R9} 7|21b18 23m7
+28V13*IsOn{boolean} 28>18 7|26b13 29l8 29t12
+28r18 Hrm{10R9} 7|26b18 28r14
+32U14*GetRate 32>22 33<22 7|31b14 39l8 39t15
+32r22 Hrm{10R9} 7|31b22 34r10 35r18
+33i22 Rate{9|15I12} 7|32b22 35m10 37m10
+36U14*Tick 36=19 36>41 7|41b14 56l8 56t12
+36r19 Hrm{10R9} 7|41b19 43r10 45m29 45r29 48m10 49r67 53m10
+36r41 Hrt{5|10R9} 7|41b41 45r24
+X 7 hrm.adb
+6f4 Error{float} 50r67
+X 9 measures.ads
+3K9*Measures 6|1w6 13r17 33r33 7|11r19 32r33 37r18 49r12 53r22 9|34e13
+15I12*BPM{integer} 6|13r26 33r42 7|11r28 32r42 37r27 53r31
+27V13*LimitBPM{15I12} 7|49s21
+X 10 randomnumber.ads
+4K9*RandomNumber 7|2w6 49r30 10|44e17
+33V13*UniformIntegerWithError{integer} 7|49s43
+

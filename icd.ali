@@ -1,0 +1,155 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_RECURSION
+RV SPARK_05
+
+U icd%b			icd.adb			6cf44b82 NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W hrm%s			hrm.adb			hrm.ali
+W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
+W measures%s		measures.adb		measures.ali
+W network%s		network.adb		network.ali
+W system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+
+U icd%s			icd.ads			4ce9fa51 EE NE OO PK IU
+W hrm%s			hrm.adb			hrm.ali
+W impulsegenerator%s	impulsegenerator.adb	impulsegenerator.ali
+W measures%s		measures.adb		measures.ali
+W network%s		network.adb		network.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-contai.ads		20170516105950 61e5e089 ada.containers%s
+D a-cdlili.ads		20170516105948 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20170516105950 20298884 ada.containers.helpers%s
+D a-except.ads		20170516105952 291912d5 ada.exceptions%s
+D a-finali.ads		20170516105954 bf4f806b ada.finalization%s
+D a-inteio.ads		20170516105954 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20170516105948 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20170516105952 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20170516105952 119b8fb3 ada.streams%s
+D a-tags.ads		20170516105954 d3a89129 ada.tags%s
+D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
+D a-tiinio.ads		20170516105950 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D heart.ads		20180308011338 9fbc8907 heart%s
+D hrm.ads		20180308011338 070f95d8 hrm%s
+D icd.ads		20180314232326 dcf10ab8 icd%s
+D icd.adb		20180315001816 ee3bcda3 icd%b
+D impulsegenerator.ads	20180308011338 31c22809 impulsegenerator%s
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D network.ads		20180314035030 0ddaba93 network%s
+D principal.ads		20180308011338 ba98eec4 principal%s
+D system.ads		20170516105954 32a08138 system%s
+D s-atocou.ads		20170516105956 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-fatflt.ads		20170516105952 11beb392 system.fat_flt%s
+D s-fatgen.ads		20170516105956 49cbaf86 system.fat_gen%s
+D s-ficobl.ads		20170516105956 078245e4 system.file_control_block%s
+D s-finroo.ads		20170516105954 4ff27390 system.finalization_root%s
+D s-parame.ads		20170516105954 7e2a0d7f system.parameters%s
+D s-soflin.ads		20170516105950 14e1eb6c system.soft_links%s
+D s-stache.ads		20170516105954 a37c21ec system.stack_checking%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+D s-stoele.ads		20170516105956 2dc34a04 system.storage_elements%s
+D s-traent.ads		20170516105950 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20170516105952 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20170516105954 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 18|5r6 5r23 6r6 6r31
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[13|46] 18|6w10 6r35
+X 9 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[3|69]>
+X 12 a-textio.ads
+49K13*Text_IO 471e16 18|5w10 5r27
+242U14*Put 18|57s17 61s25 63s41 69s41
+X 16 hrm.ads
+7K9*HRM 38e8 17|2w6 47r65 54r70 59r63 62r104 18|1w6 47r65 53r17 111r70 129r63
+. 140r17 145r104
+10R9*HRMType 16e17 17|47r69 54r74 59r67 62r108 18|47r69 111r74 129r67 145r108
+32U14*GetRate 18|53s21 140s21
+X 17 icd.ads
+10K9*ICD 64l5 64e8 18|8b14 164l5 164t8
+12R14*ICDType 35e27 38r34 40r32 42r33 44r32 47r43 49r36 51r41 54r48 59r41
+. 62r37 18|17r34 31r32 36r33 41r32 47r43 100r36 105r41 111r48 129r41 145r37
+15b9*IsModeOn{boolean} 18|19m21 33m21 38m21 43r18 148r24
+17i9*TachyBound{22|15I12} 18|22m21 80r35
+19i9*VentFibrilJoulesToDeliver{22|9I12} 18|23m21 155r70
+21b9*IsTachy{boolean} 18|20m21 54r24 75m37 82m29 96m29 102r28 157r33
+23b9*IsVentFibril{boolean} 18|21m21 107r28 120m37 122m37 154r35 157r57
+25i9*NumTachySignals{integer} 18|24m21 58r33 65m45 65r68 76m37 91m29 91r52
+28i9*NumBeatsPerTick{integer} 18|25m21 62r61 89m29
+30i9*TachyImpulseBPM{22|15I12} 18|26m21 83m29 86r58
+32i9*NumTicksPassed{integer} 18|27m21 62r40 67m45 70m45 70r67 77m37 92m29
+. 92r51
+34b9*SendTachySignal{boolean} 18|28m21 52m21 64m45 90m29 151r37
+38U19*Init 38<24 18|17b19 29l13 29t17
+38r24 Icd{12R14} 18|17b24 19m17 20m17 21m17 22m17 23m17 24m17 25m17 26m17
+. 27m17 28m17
+40U19*On 40<22 18|31b19 34l13 34t15
+40r22 Icd{12R14} 18|31b22 33m17
+42U19*Off 42<23 18|36b19 39l13 39t16
+42r23 Icd{12R14} 18|36b23 38m17
+44V18*IsOn{boolean} 44>23 18|41b18 44l13 44t17
+44r23 Icd{12R14} 18|41b23 43r14
+47U19*CheckTachy 47=30 47>52 18|47b19 78s33 98l13 98t23 149s25
+47r30 Icd{12R14} 18|47b30 52m17 54r20 58r29 62r36 62r57 64m41 65m41 65r64
+. 67m41 70m41 70r63 75m33 76m33 77m33 78m44 80r31 82m25 83m25 86r54 89m25
+. 90m25 91m25 91r48 92m25 92r47 96m25
+47r52 Monitor{16|10R9} 18|47b52 53r29 78r49
+49V18*HasTachy{boolean} 49>27 18|100b18 103l13 103t21
+49r27 Icd{12R14} 18|100b27 102r24
+51V18*HasVentFibril{boolean} 51>32 18|105b18 108l13 108t26
+51r32 Icd{12R14} 18|105b32 107r24
+54U19*CheckVentFibril 54=35 54>57 55>67 18|111b19 125l13 125t28 150s25
+54r35 Icd{12R14} 18|111b35 118r46 120m33 122m33
+54r57 Monitor{16|10R9} 18|111b57 118r51
+55a67 History{23|42A9} 18|111b83 117r20 117r28 118r60
+59V18*AverageChange{integer} 59>32 59>50 60>57 18|118s32 129b18 143l13 143t26
+59r32 Icd{12R14} 18|129b32
+59r50 Monitor{16|10R9} 18|129b50 140r29
+60a57 History{23|42A9} 18|129b76 136r52 137r51 137r71 141r38 141r46
+62U19*Tick 62=24 62=46 62>91 62>117 18|145b19 162l13 162t17
+62r24 Icd{12R14} 18|145b24 148r20 149m36 150m41 151r33 154r31 155r66 157r29
+. 157r53
+62r46 Gen{19|10R9} 18|145b46 152m61 155m61 158m61
+62r91 Monitor{16|10R9} 18|145b91 149r41 150r46
+62a117 History{23|42A9} 18|145b117 150r55
+X 18 icd.adb
+10i9 INIT_TACHYBOUND{integer} 22r35
+11i9 INIT_JOULESTODELIVER_VENTFIBRIL{22|9I12} 23r50
+12i9 JOULESTODELIVER_TACHY{22|9I12} 152r66
+13i9 NUMSIGNAL_TACHY{integer} 58r51
+14i9 TACHY_IMPULSERATECHANGE{22|15I12} 83r56
+15f9 NUMDECISONDS_PERMINUTE{float} 87r48
+48i17 Rate{22|15I12} 53m38 80r24 83r49
+49f17 Tmp_NumBeatsPerTick{float} 87m25 89r68
+50f17 Tmp_TachyImpulseBPM{float} 86m25 87r73
+112i9 Avg{integer} 114m17 118m25 119r29
+131i17 Sum{integer} 134m17 137m33 137r40 141m17 141r24 142r17
+132i17 Rate{22|15I12} 140m38 141r31
+136i29 I{integer} 137r59 137r79
+X 19 impulsegenerator.ads
+7K9*ImpulseGenerator 17|4w6 62r59 18|2w6 145r59 152r33 155r33 158r33 19|38e21
+10R9*GeneratorType 17|62r76 18|145r76 19|18e17
+33U14*SetImpulse 18|152s50 155s50 158s50
+X 22 measures.ads
+3K9*Measures 17|1w6 1r20 18|3w6 3r20 48r24 132r24 22|34e13
+9I12*Joules{integer} 17|19r37 18|11r52 12r42
+15I12*BPM{integer} 17|17r22 30r27 18|14r44 48r33 132r33
+X 23 network.ads
+6K9*Network 17|3w6 55r80 60r70 62r130 18|4w6 111r96 129r89 145r130 23|118e12
+36i7*Rate{22|15I12} 18|117r42 137r64 137r82 141r60
+42A9*RateHistory(35R9)<integer> 17|55r88 60r78 62r138 18|111r104 129r97 145r138
+

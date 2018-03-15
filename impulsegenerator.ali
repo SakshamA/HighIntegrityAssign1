@@ -1,0 +1,59 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+
+U impulsegenerator%b	impulsegenerator.adb	dcfac860 NE OO PK
+W heart%s		heart.adb		heart.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U impulsegenerator%s	impulsegenerator.ads	057156a5 EE NE OO PK
+W heart%s		heart.adb		heart.ali
+W measures%s		measures.adb		measures.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-numeri.ads		20170516105950 bb51c45a ada.numerics%s
+D a-nuflra.ads		20170516105950 4056ab7a ada.numerics.float_random%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D heart.ads		20180308011338 9fbc8907 heart%s
+D impulsegenerator.ads	20180308011338 31c22809 impulsegenerator%s
+D impulsegenerator.adb	20180308011338 ca1a6ce4 impulsegenerator%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D randomnumber.ads	20180308011338 b89e058a randomnumber%s
+D system.ads		20170516105954 32a08138 system%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-rannum.ads		20170516105952 99ade2f2 system.random_numbers%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+X 5 heart.ads
+7K9*Heart 39e11 6|2w6 36r56 7|2w6 35r56 36r21 44r10
+10R9*HeartType 18e17 6|36r62 7|35r62 36r27
+26U14*SetImpulse 7|44s16
+X 6 impulsegenerator.ads
+7K9*ImpulseGenerator 38l5 38e21 7|4b14 49l5 49t21
+10R9*GeneratorType 18e17 21r29 24r30 27r31 30r27 33r38 36r28 7|6r29 12r30
+. 17r31 22r27 27r38 35r28
+14i10*Impulse{9|9I12} 7|9m11 31m14 44r44
+17b10*IsOn{boolean} 7|8m11 14m11 19m11 24r18 30r14 39r14
+21U14*Init 21<19 7|6b14 10l8 10t12
+21r19 Gen{10R9} 7|6b19 8m7 9m7
+24U14*On 24=17 7|12b14 15l8 15t10
+24r17 Gen{10R9} 7|12b17 14m7
+27U14*Off 27=18 7|17b14 20l8 20t11
+27r18 Gen{10R9} 7|17b18 19m7
+30V13*IsOn{boolean} 30>18 7|22b13 25l8 25t12
+30r18 Gen{10R9} 7|22b18 24r14
+33U14*SetImpulse 33=25 33>53 7|27b14 33l8 33t18
+33r25 Gen{10R9} 7|27b25 30r10 31m10
+33i53 J{9|9I12} 7|27b53 31r25
+36U14*Tick 36>19 36=43 7|35b14 47l8 47t12
+36r19 Gen{10R9} 7|35b19 39r10 44r40
+36r43 Hrt{5|10R9} 7|35b43 43r25 45m10
+X 7 impulsegenerator.adb
+36r7 HrtVariable{5|10R9} 43m10 44m27 44r27 45r17
+X 9 measures.ads
+3K9*Measures 6|1w6 14r20 33r60 7|9r22 27r60 9|34e13
+9I12*Joules{integer} 6|14r29 33r69 7|9r31 27r69
+X 10 randomnumber.ads
+4K9*RandomNumber 7|1w6 10|44e17
+

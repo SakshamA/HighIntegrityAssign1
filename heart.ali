@@ -1,0 +1,63 @@
+V "GNAT Lib v2017"
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+
+U heart%b		heart.adb		4b1047d8 NE OO PK
+W measures%s		measures.adb		measures.ali
+W randomnumber%s	randomnumber.adb	randomnumber.ali
+
+U heart%s		heart.ads		34b37eac EE NE OO PK
+W measures%s		measures.adb		measures.ali
+
+D ada.ads		20170516105950 76789da1 ada%s
+D a-numeri.ads		20170516105950 bb51c45a ada.numerics%s
+D a-nuflra.ads		20170516105950 4056ab7a ada.numerics.float_random%s
+D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
+D heart.ads		20180308011338 9fbc8907 heart%s
+D heart.adb		20180314050716 c73d3cfe heart%b
+D interfac.ads		20170516105950 5ab55268 interfaces%s
+D measures.ads		20180308011338 ab0ff7ab measures%s
+D randomnumber.ads	20180308011338 b89e058a randomnumber%s
+D system.ads		20170516105954 32a08138 system%s
+D s-exctab.ads		20170516105954 54135002 system.exception_table%s
+D s-rannum.ads		20170516105952 99ade2f2 system.random_numbers%s
+D s-stalib.ads		20170516105954 09bd3940 system.standard_library%s
+X 5 heart.ads
+7K9*Heart 39l6 39e11 6|4b14 72l5 72t10
+10R9*HeartType 18e17 22r31 26r40 29r35 33r33 37r34 6|23r31 33r40 39r33 45r35
+. 50r34
+13i10*Rate{8|15I12} 6|26m13 42r21 55m16 56r36 59m16 59r48 61m16 66m13 67r70
+16i10*Impulse{8|9I12} 6|30m13 36m13 47r20 52r17 57r20 59r61
+22U14*Init 22<19 6|23b14 31l8 31t12
+22r19 Heart{10R9} 6|23b19 26m7 30m7
+26U14*SetImpulse 26=25 26>51 6|33b14 37l8 37t18
+26r25 Heart{10R9} 6|33b25 36m7
+26i51 Joules{8|9I12} 6|34b25 36r24
+29V13*GetImpulse{8|9I12} 29>24 6|45b13 48l8 48t18
+29r24 Heart{10R9} 6|45b24 47r14
+33U14*GetRate 33>22 34<22 6|39b14 43l8 43t15
+33r22 Heart{10R9} 6|39b22 42r15
+34i22 Rate{8|15I12} 6|40b22 42m7
+37U14*Tick 37=19 6|50b14 70l8 70t12
+37r19 Heart{10R9} 6|50b19 52r11 55m10 56r30 57r14 59m10 59r42 59r55 61m10
+. 66m7 67r64
+X 6 heart.adb
+7i4 NoShock{8|9I12} 52r27
+8i4 SmallShock{8|9I12} 57r30
+11i4 HeartRateMu{8|15I12} 28r43
+12i4 HeartRateSigma{8|15I12} 29r43
+15f4 Volatility{float} 68r64
+18i4 DefaultChange{integer} 56r43 62m10
+X 8 measures.ads
+3K9*Measures 5|1w6 13r17 16r20 26r63 29r53 34r33 6|1w6 7r23 8r26 11r27 12r30
+. 27r9 34r37 40r33 45r53 56r12 59r24 67r9 8|34e13
+9I12*Joules{integer} 5|16r29 26r72 29r62 6|7r32 8r35 34r46 45r62
+15I12*BPM{integer} 5|13r26 34r42 6|11r36 12r39 40r42
+27V13*LimitBPM{15I12} 6|27s18 56s21 59s33 67s18
+X 9 randomnumber.ads
+4K9*RandomNumber 6|2w6 27r27 67r27 9|44e17
+8V13*NormalInteger{integer} 6|28s29
+33V13*UniformIntegerWithError{integer} 6|67s40
+
