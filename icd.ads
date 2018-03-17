@@ -56,7 +56,7 @@ package ICD is
 						        History : in Network.RateHistory) return Integer;
 
 	-- A procedure to change tachycardia and ventricle fibrillation settings
-	procedure ChangeSettingsResponse(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
+	procedure ChangeSettingsRequest(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
 
 	-- A procedure to read tachycardia and ventricle fibrillation settings
 	procedure ReadSettingsResponse(Icd : in ICDType; ReadTachyBound : in out BPM; ReadJoulesToDeliver : in out Joules);

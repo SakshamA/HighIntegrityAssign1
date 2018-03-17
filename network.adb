@@ -134,16 +134,21 @@ package body Network is
             Put("ReadRateHistoryRequest (HSource: ");
             Principal.DebugPrintPrincipalPtr(Message.HSource);
             Put(")"); New_Line;
-         when ReadRateHistoryResponse =>
-           Put("ReadRateHistoryRequest (HDestination: ");
-           Principal.DebugPrintPrincipalPtr(Message.HDestination);
-           Put("; History: "); 
-           for Index in Message.History'Range loop
-              Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Rate));
-              Put(" @ "); Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Time));
-              Put(", ");
-           end loop;
-           Put(")"); New_Line;
+         -- when ReadRateHistoryResponse =>
+         --   Put("ReadRateHistoryRequest (HDestination: ");
+         --   Principal.DebugPrintPrincipalPtr(Message.HDestination);
+         --   Put("; History: "); 
+           -- for Index in Message.History'Range loop
+           --    Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Rate));
+           --    Put(" @ "); Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Time));
+           --    Put(", ");
+           -- end loop;
+           -- Put(")"); New_Line;
+         when ReadSettingsRequest =>
+            Put("ReadSettingsRequest (HSource: ");
+            Principal.DebugPrintPrincipalPtr(Message.HSource);
+            Put(")"); New_Line;
+
          when others =>
             -- you should implement these for your own debugging if you wish
             null;

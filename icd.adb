@@ -129,13 +129,13 @@ package body ICD is
 	return (Sum/6);
 	end AverageChange;
 
-	procedure ChangeSettingsResponse(Icd : in out ICDType; 
+	procedure ChangeSettingsRequest(Icd : in out ICDType; 
 		                             NewTachyBound : in BPM; 
 		                             NewJoulesToDeliver : in BPM) is
 	begin
 		Icd.TachyBound := NewTachyBound;
 		Icd.VentFibrilJoulesToDeliver := NewJoulesToDeliver;
-	end ChangeSettingsResponse;
+	end ChangeSettingsRequest;
 
 	procedure ReadSettingsResponse(Icd : in ICDType; 
 								   ReadTachyBound : in out BPM; 
