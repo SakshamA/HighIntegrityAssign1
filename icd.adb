@@ -123,27 +123,27 @@ package body ICD is
 		Sum := 0;
 		--Sum differences in the last NUM_READINGS values 
 			for I in Integer range (History'Last-NUM_READINGS+1)
-									..(NUM_READINGS-1) loop
+									..(History'Last-1) loop
 				Sum := Sum + abs (History(I+1).Rate - History(I).Rate);
 			end loop;	
 	return (Sum/6);
 	end AverageChange;
 
-	procedure ChangeSettingsResponse(Icd : in out ICDType; 
+	procedure ChangeSettingsRequest(Icd : in out ICDType; 
 		                             NewTachyBound : in BPM; 
 		                             NewJoulesToDeliver : in BPM) is
 	begin
 		Icd.TachyBound := NewTachyBound;
 		Icd.VentFibrilJoulesToDeliver := NewJoulesToDeliver;
-	end ChangeSettingsResponse;
+	end ChangeSettingsRequest;
 
-	procedure ReadSettingsResponse(Icd : in ICDType; 
+	procedure ReadSettingsRequest(Icd : in ICDType; 
 								   ReadTachyBound : in out BPM; 
 								   ReadJoulesToDeliver : in out Joules) is
 	begin
 		ReadTachyBound := Icd.TachyBound;
 		ReadJoulesToDeliver := Icd.VentFibrilJoulesToDeliver;
-	end ReadSettingsResponse;
+	end ReadSettingsRequest;
 
 	procedure Tick(Icd : in out ICDType; 
 				   Gen : in out ImpulseGenerator.GeneratorType; 

@@ -56,10 +56,10 @@ package ICD is
 						        History : in Network.RateHistory) return Integer;
 
 	-- A procedure to change tachycardia and ventricle fibrillation settings
-	procedure ChangeSettingsResponse(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
+	procedure ChangeSettingsRequest(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
 
 	-- A procedure to read tachycardia and ventricle fibrillation settings
-	procedure ReadSettingsResponse(Icd : in ICDType; ReadTachyBound : in out BPM; ReadJoulesToDeliver : in out Joules);
+	procedure ReadSettingsRequest(Icd : in ICDType; ReadTachyBound : in out BPM; ReadJoulesToDeliver : in out Joules);
 
 	-- Tick the clock; determine whether or not to send impulses
 	procedure Tick(Icd : in out ICDType; Gen : in out ImpulseGenerator.GeneratorType; Monitor : in HRM.HRMType; History : in Network.RateHistory);

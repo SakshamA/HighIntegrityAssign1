@@ -39,6 +39,7 @@ package Network is
    
    -- rate histories, for ReadRateHistoryResponse messages
    HISTORY_LENGTH : constant Integer := 6;
+   HISTORY_NUMREADINGS : constant Integer := 5;
    type RateHistory is array (Integer range 1..HISTORY_LENGTH) of RateRecord;
    
    
