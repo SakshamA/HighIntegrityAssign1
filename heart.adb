@@ -58,7 +58,7 @@ package body Heart is
 	 -- A crude slowing of the heart given a shock
 	 Heart.Rate := Measures.LimitBPM(Heart.Rate - Heart.Impulse);
       else -- a large shock
-	 Heart.Rate := 72;
+	 Heart.Rate := 0;
 	 DefaultChange := 0;
       end if;
       

@@ -108,6 +108,8 @@ package body Network is
       end if;
    end GetNewMessage;
 
+
+
    procedure SendMessage(Net : in Network;
                          Message : in NetworkMessage) is
    begin
@@ -123,48 +125,24 @@ package body Network is
          when ModeOn =>
             Put("ModeOn (MOnSource: ");
             Principal.DebugPrintPrincipalPtr(Message.MOnSource);
-            Put(")"); New_Line; New_Line;
+            Put(")"); New_Line;
          when ModeOff =>
             Put("ModeOff (MOffSource: ");
             Principal.DebugPrintPrincipalPtr(Message.MOffSource);
-            Put(")"); New_Line; New_Line;
+            Put(")"); New_Line;
          when ReadRateHistoryRequest =>
             Put("ReadRateHistoryRequest (HSource: ");
             Principal.DebugPrintPrincipalPtr(Message.HSource);
             Put(")"); New_Line;
          when ReadRateHistoryResponse =>
-           Put("ReadRateHistoryResponse (HDestination: ");
+           Put("ReadRateHistoryRequest (HDestination: ");
            Principal.DebugPrintPrincipalPtr(Message.HDestination);
-           Put(");"); New_Line;
-           Put("History: "); 
-           for Index in Integer range (Message.History'Last-HISTORY_NUMREADINGS+1)
-                                       ..(Message.History'Last) loop
+           Put("; History: "); 
+           for Index in Message.History'Range loop
               Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Rate));
               Put(" @ "); Ada.Integer_Text_IO.Put(Integer(Message.History(Index).Time));
               Put(", ");
            end loop;
-           Put(")"); New_Line; New_Line;
-         when ReadSettingsRequest =>
-            Put("ReadSettingsRequest (RSource: ");
-            Principal.DebugPrintPrincipalPtr(Message.RSource);
-            Put(")"); New_Line;
-         when ReadSettingsResponse =>
-           Put("ReadSettingsResponse (RDestination: ");
-           Principal.DebugPrintPrincipalPtr(Message.RDestination);
-           Put(");");
-           New_Line;
-           Put("TachyBound: ");
-           Ada.Integer_Text_IO.Put(Integer(Message.RTachyBound));
-           Put("; JoulesToDeliver: ");
-           Ada.Integer_Text_IO.Put(Integer(Message.RJoulesToDeliver));
-           New_Line; New_Line;
-         when ChangeSettingsRequest =>
-           Put("ChangeSettingsRequest (CSource: ");
-           Principal.DebugPrintPrincipalPtr(Message.CSource);
-           Put(")"); New_Line;
-         when ChangeSettingsResponse =>
-           Put("ChangeSettingsResponse (CDestination: ");
-           Principal.DebugPrintPrincipalPtr(Message.CDestination);
            Put(")"); New_Line;
          when others =>
             -- you should implement these for your own debugging if you wish
@@ -176,7 +154,6 @@ package body Network is
    begin
       Net.CurrentMessageAvailable :=
         RandomNumber.RandomBooleanWithBias(NewMessageProbabilityPerTick);
-
       if Net.CurrentMessageAvailable then
          Net.CurrentMessage := GenerateRandomMessage(Net.Principals.all);
       end if;
