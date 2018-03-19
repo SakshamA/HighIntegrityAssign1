@@ -130,26 +130,34 @@ begin
 			  			Put("REQUEST NOT ALLOWED: Turn Off the ICD first");
 			  			New_Line;
 			  		else
-			  			Network.DebugPrintMessage(Msg); 
+  			            Put("ReadSettingsRequest (RSource: ");
+			            Principal.DebugPrintPrincipalPtr(Msg.RSource);
+			            Put(")"); New_Line;
 			  			ICD.ReadSettingsRequest(ICDSoftware, RTachyBound, 
 			  									RJoulesToDeliver);
-			  			Network.SendMessage(Net, (MessageType =>
-			  								Network.ReadSettingsResponse,
-			  								RDestination => Msg.RSource,
-			  								RTachyBound => RTachyBound,
-			  								RJoulesToDeliver => RJoulesToDeliver));
+			  			Put("ReadSettingsResponse (RDestination: ");
+						Principal.DebugPrintPrincipalPtr(Msg.RSource);
+						Put(");");
+						New_Line;
+						Put("TachyBound: ");
+						Ada.Integer_Text_IO.Put(Integer(RTachyBound));
+						Put("; JoulesToDeliver: ");
+						Ada.Integer_Text_IO.Put(Integer(RJoulesToDeliver));
+						New_Line; New_Line;
 			  		end if;
 			  	when Network.ChangeSettingsRequest =>
 			  		if ICDSoftware.IsModeOn then
 			  			Put("REQUEST NOT ALLOWED: Turn off the ICD first");
 			  			New_Line;
 			  		else
-			  			Network.DebugPrintMessage(Msg); 
+						Put("ChangeSettingsRequest (CSource: ");
+						Principal.DebugPrintPrincipalPtr(Msg.CSource);
+						Put(")"); New_Line;
 			  			ICD.ChangeSettingsRequest(ICDSoftware, Msg.CTachyBound, 
 			  									  Msg.CJoulesToDeliver);
-			  			Network.SendMessage(Net, (MessageType =>
-												  Network.ChangeSettingsResponse,
-												  CDestination => Msg.CSource));
+						Put("ChangeSettingsResponse (CDestination: ");
+						Principal.DebugPrintPrincipalPtr(Msg.CSource);
+						Put(")"); New_Line;
 						Put("NewTachyBound: ");
 			       		Ada.Integer_Text_IO.Put(Integer(Msg.CTachyBound));
 			       		Put("; NewJoulesToDeliver: ");
