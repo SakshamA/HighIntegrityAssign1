@@ -18,7 +18,7 @@ package body ICD is
 
 	-- Number of heart rate readings required to detect ventricle 
 	-- vibrillation
-	NUM_READINGS : constant Integer := 6;
+	NUM_READINGS : constant Integer := 5;
 
 	-- Amount of BPM above current heart rate when tachycardia is detected
 	TACHY_IMPULSERATECHANGE : constant BPM := 15;
@@ -101,13 +101,13 @@ package body ICD is
 	end CheckTachy;
 
 	procedure CheckVentFibril(Icd : in out ICDType; Monitor : in HRM.HRMType;
-							  History : in Network.RateHistory) is
+							  HistoryNew : in closedloop.RateHistoryNew) is
 		Avg : Integer;
 	begin
 		Avg := 0;
 		-- Will only calculate average difference if there is sufficient values
-		if History(NUM_READINGS).Rate /= 0 then	
-			Avg := AverageChange(Icd, Monitor, History);
+		if HistoryNew(NUM_READINGS).Rate /= 0 then	
+			Avg := AverageChange(Icd, Monitor, HistoryNew);
 			if (Avg >= MAX_AVG) then
 				Icd.IsVentFibril := True;
 			else 
@@ -117,14 +117,14 @@ package body ICD is
 	end CheckVentFibril;
 
 	function AverageChange(Icd : in ICDType; Monitor : in HRM.HRMType; 
-						   History : in Network.RateHistory) return Integer is
+						   HistoryNew : in closedloop.RateHistoryNew) return Integer is
 		Sum : Integer;
 	begin
 		Sum := 0;
 		--Sum differences in the last NUM_READINGS values 
-			for I in Integer range (History'Last-NUM_READINGS+1)
-									..(History'Last-1) loop
-				Sum := Sum + abs (History(I+1).Rate - History(I).Rate);
+			for I in Integer range (HistoryNew'Last-NUM_READINGS+1)
+									..(HistoryNew'Last-1) loop
+				Sum := Sum + abs (HistoryNew(I+1).Rate - HistoryNew(I).Rate);
 			end loop;	
 	return (Sum/6);
 	end AverageChange;
@@ -148,10 +148,10 @@ package body ICD is
 	procedure Tick(Icd : in out ICDType; 
 				   Gen : in out ImpulseGenerator.GeneratorType; 
 				   Monitor : in HRM.HRMType; 
-				   History : in Network.RateHistory) is
+				   HistoryNew : in closedloop.RateHistoryNew) is
 	begin
 		CheckTachy(Icd, Monitor);
-		CheckVentFibril(Icd, Monitor, History);
+		CheckVentFibril(Icd, Monitor, HistoryNew);
 		if 	Icd.SendTachySignal then
 			ImpulseGenerator.SetImpulse(Gen, JOULESTODELIVER_TACHY);
 		elsif Icd.IsVentFibril then

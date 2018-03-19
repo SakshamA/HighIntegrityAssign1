@@ -28,6 +28,8 @@ package body ClosedLoop is
 	-- stores some history information on measured heart rate
 	History : Network.RateHistory;
 	HistoryPos : Integer := History'First;
+	HistoryNew : RateHistoryNew;
+	HistoryNewPos : Integer := HistoryNew'First;
 	CurrentTime : TickCount := 0;
 	-- an array of known principals to use to initialise the network
 	-- but note that the network can generate messages from other, unknown,
@@ -177,11 +179,30 @@ begin
 		Put(Item => HeartRate);
 		New_Line;
 
+		--record history for ventrical fibrillation
+		if HistoryNewPos > HistoryNew'Last then
+			for M in Integer range 1..(HistoryNew'Last-1) loop
+				HistoryNew(M) := HistoryNew(M+1);
+				-- abc := HistoryNew(M);
+				-- Put(Item => abc);
+			end loop;
+
+			HistoryNew(HistoryNew'Last) := (Rate => HeartRate, Time => CurrentTime);
+		end if;
+
 		-- record history
 		if HistoryPos <= History'Last then
 			History(HistoryPos) := (Rate => HeartRate, Time => CurrentTime);
 			HistoryPos := HistoryPos + 1;
 		end if;
+
+		--record history for ventrical fibrillation
+		if HistoryNewPos <= HistoryNew'Last then
+			HistoryNew(HistoryNewPos) := (Rate => HeartRate, Time => CurrentTime);
+			HistoryNewPos := HistoryNewPos + 1;
+		end if;
+
+
 
 		if HistoryPos > History'Last then
 			for M in Integer range 1..(History'Last-1) loop
@@ -190,7 +211,7 @@ begin
 			History(History'Last) := (Rate => HeartRate, Time => CurrentTime);
 		end if;
 
-		ICD.Tick(ICDSoftware, Generator, Monitor, History);
+		ICD.Tick(ICDSoftware, Generator, Monitor, HistoryNew);
 		ImpulseGenerator.Tick(Generator, Hrt);
 		HRM.Tick(Monitor, Hrt);
 	end if;
