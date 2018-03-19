@@ -7,8 +7,8 @@ U measures%b		measures.adb		17bda97a NE OO PK
 
 U measures%s		measures.ads		ab0ff7ab EE NE OO PK
 
-D measures.ads		20180308011338 ab0ff7ab measures%s
-D measures.adb		20180308011338 bcb25ed1 measures%b
+D measures.ads		20180319110552 ab0ff7ab measures%s
+D measures.adb		20180319110552 bcb25ed1 measures%b
 D system.ads		20170516105954 32a08138 system%s
 X 1 measures.ads
 3K9*Measures 34l5 34e13 2|1b14 29l5 29t13

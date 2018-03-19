@@ -1,5 +1,6 @@
 with Measures; use Measures;
 with HRM;
+with closedloop;
 with Network;
 with ImpulseGenerator;
 
@@ -48,12 +49,12 @@ package ICD is
 
 	-- A procedure to detect ventricle fibrillation
 	procedure CheckVentFibril(Icd : in out ICDType; Monitor : in HRM.HRMType; 
-						   		  History : in Network.RateHistory);
+						   		  HistoryNew : in closedloop.RateHistoryNew);
 
 	-- A function to calculate average change in heart rate per reading over
 	-- the previous six readings
 	function AverageChange(Icd : in ICDType; Monitor : in HRM.HRMType; 
-						        History : in Network.RateHistory) return Integer;
+						        HistoryNew : in closedloop.RateHistoryNew) return Integer;
 
 	-- A procedure to change tachycardia and ventricle fibrillation settings
 	procedure ChangeSettingsRequest(Icd : in out ICDType; NewTachyBound : in BPM; NewJoulesToDeliver : in BPM); 
@@ -62,6 +63,6 @@ package ICD is
 	procedure ReadSettingsRequest(Icd : in ICDType; ReadTachyBound : in out BPM; ReadJoulesToDeliver : in out Joules);
 
 	-- Tick the clock; determine whether or not to send impulses
-	procedure Tick(Icd : in out ICDType; Gen : in out ImpulseGenerator.GeneratorType; Monitor : in HRM.HRMType; History : in Network.RateHistory);
+	procedure Tick(Icd : in out ICDType; Gen : in out ImpulseGenerator.GeneratorType; Monitor : in HRM.HRMType; HistoryNew : in closedloop.RateHistoryNew);
 
 end ICD;
