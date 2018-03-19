@@ -19,16 +19,16 @@ package Measures is
    
    -- A function to limit floats
    function Limit(Input : in Integer; Fst : in Integer; Lst : in Integer) 
-		 return Integer;
+       return Integer;
    --# pre Fst <= Lst;
    --# return Output => (Fst <= Output and Output <= Lst);
    
-   -- A function to limit BPM measures
+   -- A function to limit MmHg measures
    function LimitBPM(Input : in Integer) return BPM;
-   --# return Output => (BPM'First <= Output and Output <= BPM'Last);
+   --# return Output => (MmHg'First <= Output and Output <= MmHg'Last);
    
-   -- A function to limit Joules measures
+   -- A function to limit Dosage measures
    function LimitJoules(Input : in Integer) return Joules;
-   --# return Output => (Joules'First <= Output and Output <= Joules'Last);
+   --# return Output => (Dosage'First <= Output and Output <= MmHg'Last);
       
 end Measures;
