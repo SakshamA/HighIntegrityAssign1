@@ -33,8 +33,8 @@ D a-textio.ads		20170516105954 386df5d4 ada.text_io%s
 D a-unccon.ads		20170516105954 31484697 ada.unchecked_conversion%s
 D interfac.ads		20170516105950 5ab55268 interfaces%s
 D i-cstrea.ads		20170516105950 e53d8b8e interfaces.c_streams%s
-D randomnumber.ads	20180319110552 b89e058a randomnumber%s
-D randomnumber.adb	20180319110552 6594f887 randomnumber%b
+D randomnumber.ads	20180320022532 b89e058a randomnumber%s
+D randomnumber.adb	20180320022532 6594f887 randomnumber%b
 D system.ads		20170516105954 32a08138 system%s
 D s-crtl.ads		20170516105948 0ebbdb71 system.crtl%s
 D s-exctab.ads		20170516105954 54135002 system.exception_table%s

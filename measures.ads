@@ -19,7 +19,7 @@ package Measures is
    
    -- A function to limit floats
    function Limit(Input : in Integer; Fst : in Integer; Lst : in Integer) 
-       return Integer;
+		 return Integer;
    --# pre Fst <= Lst;
    --# return Output => (Fst <= Output and Output <= Lst);
    

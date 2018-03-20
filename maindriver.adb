@@ -6,12 +6,8 @@ procedure MainDriver is
 		-- x : Integer := 1;
 begin
 	ClosedLoop.Init;
-	for I in Integer range 1..150 loop
+	for I in Integer range 1..300 loop
 		ClosedLoop.Tick;
-		-- Put("I: ");
-		-- Put(Integer(x));
-		-- x := i+ 1;
-		-- New_line;
 	end loop;
 
 end MainDriver;

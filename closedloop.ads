@@ -2,7 +2,6 @@
 -- that you will implement. Do not change this interface as we may run
 -- automatic tests against your code that assume that it implements this
 -- interface exactly.
-with Measures;
 package ClosedLoop is
   
   -- This procedure should create three Principals: one Patient, one 
@@ -14,16 +13,6 @@ package ClosedLoop is
   -- It should then create and initialise each of the components of the
   -- closed loop system, with the Network initialised so that the three
   -- principals mentioned above are the "known" principals (see network.ads)
-  type RateRecordNew is record
-      Rate : Measures.BPM;
-      Time : Measures.TickCount;
-   end record;
-   
-   -- rate histories, for ReadRateHistoryResponse messages
-   HISTORY_NEW_LENGTH : constant Integer := 5;
-   HISTORY_NUMREADINGS : constant Integer := 5;
-
-  type RateHistoryNew is array (Integer range 1..HISTORY_NEW_LENGTH) of RateRecordNew;
   procedure Init;
   
   -- This procesure simulates one clock tick (decisecond)
